@@ -1,0 +1,51 @@
+# Mental Health Survey Analysis
+
+## 1. Einführung
+"""
+Analyse von Faktoren, die beeinflussen, ob Personen eine Behandlung für psychische Probleme in Anspruch nehmen.
+Ziel: Explorative Analyse und Visualisierung von Zusammenhängen zwischen Treatment, Gender, Alter und Arbeitsumfeld.
+"""
+
+## 2. Datensatz laden
+import pandas as pd
+# CSV-Datei einlesen
+df = pd.read_csv('mental_health_survey.csv')
+
+# Überblick
+print(df.head())
+print(df.info())
+
+## 3. Data Cleaning
+"""
+- Gender vereinheitlichen
+- Fehlende Werte prüfen und ggf. behandeln
+- Timestamp in nutzbares Format bringen
+- Irrelevante Spalten entfernen
+"""
+# Beispiel Gender bereinigen
+df['Gender'] = df['Gender'].replace(['M', 'male', 'Male'], 'Male')
+df['Gender'] = df['Gender'].replace(['F', 'female', 'Female'], 'Female')
+
+# Fehlende Werte anzeigen
+print(df.isnull().sum())
+
+## 4. Explorative Analyse
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Beispiel: Treatment vs. Gender
+sns.countplot(x='Gender', hue='treatment', data=df)
+plt.title('Treatment vs. Gender')
+plt.show()
+
+# Weitere Analysen:
+- Age vs. Treatment
+- Family History vs. Treatment
+- Remote Work vs. Treatment
+- Work Interfere vs. Treatment
+- Unternehmensgröße vs. Treatment
+
+## 5. Fazit / Insights
+"""
+Kurze Zusammenfassung der wichtigsten Erkenntnisse aus den Analysen.
+"""

@@ -106,3 +106,6 @@ Die Effektgröße nach Cramér’s V beträgt 0,083, was auf praktisch keinen Zu
 
 ## Fazit
 Die Entscheidung für Treatment wird am stärksten durch Work Interfere und Family History beeinflusst. Gender hat einen kleinen bis moderaten Effekt, während Age, Remote Work und Unternehmensgröße praktisch keinen Einfluss zeigen. Arbeitsbelastung und familiäre Vorgeschichte sind demnach zentrale Faktoren für die Wahl von Treatment.
+
+## GitHub-Link
+- [Hier Link zum Notebook einfügen, falls hochgeladen]
